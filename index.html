@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang cá nhân - Nguyễn Minh Quang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        /* HÌNH NỀN TĨNH - Đã sửa lỗi link để hiển thị ngay */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -2;
+        }
+
+        .overlay {
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.65);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 { font-size: 32px; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        header p { opacity: 0.8; font-style: italic; }
+
+        /* Thẻ thông tin cá nhân */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            max-width: 550px;
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .profile-card img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .profile-info h2 { font-size: 24px; margin-bottom: 8px; color: #fff; }
+        .profile-info p { font-size: 15px; opacity: 0.9; line-height: 1.6; }
+
+        /* Thẻ nhạc Spotify */
+        .music-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 550px;
+            width: 100%;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .music-card h3 { margin-bottom: 20px; font-size: 20px; text-align: center; }
+
+        footer {
+            margin-top: auto;
+            padding: 20px 0;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 480px) {
+            .profile-card { flex-direction: column; text-align: center; }
+            header h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-image"></div>
+
+    <div class="overlay">
+        <header>
+            <h1>My Profile</h1>
+            <p>Chào mừng bạn đến với trang cá nhân của mình</p>
+        </header>
+
+        <div class="profile-card">
+            <img src="https://drive.google.com/thumbnail?id=1wRyIyEppoxSpXYQAIDX5TJS3Hi6Xvjt9&sz=w500" alt="Nguyễn Minh Quang">
+            <div class="profile-info">
+                <h2>Nguyễn Minh Quang</h2>
+                <p>🗓️ <b>Ngày sinh:</b> 20/12/2008</p>
+                <p>🏫 <b>Trường:</b> THPT Dương Xá</p>
+                <p>👥 <b>Lớp:</b> 12D5</p>
+                <p>🎬 <b>Sở thích:</b> Xem phim và nghe nhạc</p>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <h3>🎵 Nhạc Tôi Yêu Thích</h3>
+            
+            <iframe style="border-radius:12px; margin-bottom: 15px;" src="https://open.spotify.com/embed/track/6UelLqGlWMvD1bdS8T143C?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4xkOaSrkexMciRQCpUmodS?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <footer>
+            © 2026 - Designed by Nguyễn Minh Quang
+        </footer>
+    </div>
+
+</body>
+</html>
